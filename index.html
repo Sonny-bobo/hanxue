@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.color.js"></script>
+    <script src="./js/jquery.lazyload.js"></script>
+    <style>
+        .center {
+            margin: auto;
+            width: 1440px;
+        }
+    </style>
+</head>
+<body>
+    <div class="center">
+        
+    </div>
+</body>
+<script>
+    $(document).ready(function () {
+        let str = ''
+        for(let i = 1;i < 20;i++) {
+            str+='<img height="800" width="1440" src="" data-original="./img/'+i+'.jpg" alt="">'
+        }
+        $('.center').html(str);
+        // 图片按需加载
+        $('img').lazyload({
+            effect: 'fadeIn',
+            threshold: window.innerHeight
+        })
+    });
+</script>
+</html>
