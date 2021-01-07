@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>作品集</title>
     <script src="./js/jquery.min.js"></script>
-    <script src="./js/jquery.color.js"></script>
-    <script src="./js/jquery.lazyload.js"></script>
+    <!-- <script src="./js/jquery.color.js"></script> -->
+    <!-- <script src="./js/jquery.lazyload.js"></script> -->
     <style>
         body {
             background-color: #000;
@@ -27,14 +27,15 @@
     $(document).ready(function () {
         let str = ''
         for(let i = 1;i <= 68;i++) {
-            str+='<img height="800" width="1440" src="" data-original="./img/'+i+'.png" alt="">'
+            // str+='<img height="800" width="1440" src="" data-original="./img/'+i+'.png" alt="">'
+            str+='<img height="800" width="1440" src="./img/'+i+'.png" alt="">'
         }
         $('.center').html(str);
         // 图片按需加载
-        $('img').lazyload({
-            effect: 'fadeIn',
-            threshold: window.innerHeight
-        })
+        // $('img').lazyload({
+        //     effect: 'fadeIn',
+        //     threshold: window.innerHeight
+        // })
     });
 </script>
 </html>
